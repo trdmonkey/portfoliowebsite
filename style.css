@@ -4,7 +4,7 @@
 
 /* VARIABLES */
 :root {
-  --primary-color: #0f7ebf;
+  --primary-color: #4D5195; /* #0f7ebf */
   --primary-color-light: #0f8dbf1f;
   --secondary-color: #ffffff;
   --bg-color: #ffffff;
@@ -49,6 +49,7 @@ img {
   width: 100%;
   object-fit: cover;
 }
+
 .container {
   max-width: 1400px;
   margin: 0 auto;
@@ -102,6 +103,53 @@ p {
 }
 
 /* HEADER */
+header {
+  position: absolute;
+  padding: 1rem 0;
+  width: 100%;
+  z-index: 999;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+.logo h1,
+.logo h1 span {
+  color: var(--text-color);
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-family: var(--secondary-color);
+}
+.logo h1 span {
+  padding: 0 8px;
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  border-radius: 5px;
+}
+.nav-links {
+  display: flex;
+  flex: 1;
+  margin-left: 2rem;
+  position: relative;
+}
+.nav-links ul {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 3rem;
+}
+.nav-links ul li a {
+  display: block;
+  padding: 1rem 0;
+  font-weight: 600;
+}
+
+
+
+
+
 
 /* HERO SECTION */
 
