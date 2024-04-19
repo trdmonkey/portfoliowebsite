@@ -188,7 +188,17 @@ header .container {
   transform: translateY(-8px) rotate(-45deg);
 }
 
-
+/* TODO  ==> Responsive Header */
+@media (max-width: 991px) {
+  header {
+    padding: 1rem;
+    position: fixed;
+  }
+  #logo h1,
+  #logo h1 span {
+    font-size: 1.5rem;
+  }
+}
 
 
 
