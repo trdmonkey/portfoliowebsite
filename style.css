@@ -188,7 +188,9 @@ header .container {
   transform: translateY(-8px) rotate(-45deg);
 }
 
-/* TODO  ==> Responsive Header */
+
+/* TODO  ==> RESPONSIVE HEADER */
+
 @media (max-width: 991px) {
   header {
     padding: 1rem;
