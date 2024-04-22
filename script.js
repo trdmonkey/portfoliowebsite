@@ -33,14 +33,14 @@ $(document).ready(function () {
   links.on("click", moveUnderline);
 
 
+  // TODO: MENU RESPONSIVE
+  const hamBur = $(".ham-burguer");
 
 
 
 
 
 
-
-  // TODO: Mobile menu
   // QUESTION: Add sticky class if scrolled
   // IMPORTANT: skills round circle svg
   //Portfolio gallery

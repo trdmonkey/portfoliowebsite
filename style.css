@@ -161,12 +161,13 @@ header .container {
 }
 .ham-burguer {
   padding: 0.5rem;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
   background-color: var(--primary-color);
+  border-radius: 5px;
 }
 .ham-burguer span {
   display: block;
@@ -196,10 +197,51 @@ header .container {
     padding: 1rem;
     position: fixed;
   }
-  #logo h1,
-  #logo h1 span {
+  .logo h1,
+  .logo h1 span {
     font-size: 1.5rem;
   }
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+    height: 100vh;
+    padding: 6rem 2rem 2rem 2rem;
+    transform: translateX(300px);
+    background-color: var(--bg-color);
+  }
+  .nav-links ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav-links ul li {
+    width: 100%;
+  }
+  .nav-links ul li a {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  .nav-links .cta .btn {
+    width: 100%;
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+  }
+  .ham-burguer {
+    display: flex;
+    z-index: 99;
+  }
+
+
+
+
+
+
+
 }
 
 
