@@ -79,6 +79,7 @@ img {
   color: var(--text-color);
   background-color: var(--bg-color);
   border: 1px solid var(--text-color);
+  border-radius: 5px;
 }
 .btn-secondary:hover {
   color: var(--secondary-color);
@@ -255,7 +256,7 @@ header .container {
 
 
 /* 
-  TODO: ===========================  HERO  =============================== 
+  TODO: ===========================  HERO SECTION  =============================== 
 */
 #hero {
   min-height: 100vh;
@@ -269,6 +270,9 @@ header .container {
   gap: 2rem;
   color: var(--text-color);
 }
+#hero .container > div {
+  width: 50%;
+}
 .sub-heading {
   width: max-content;
   padding: 0.5rem 1rem;
@@ -279,6 +283,87 @@ header .container {
   background-color: var(--primary-color-light);
   border-radius: 5px;
 }
+.hero-text .title {
+  font-size: 4rem;
+  line-height: 1.2;
+}
+.hero-text .sub-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+.hero-text .desc {
+  font-size: 16px;
+  margin-bottom: 3rem;
+  line-height: 2;
+  opacity: 0.8;
+  max-width: 700px;
+}
+.hero-image {
+  position: relative;
+}
+.hero-image .circle {
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  top: -350px;
+  right: -180px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: var(--primary-color); */
+  background-color: var(--primary-color);
+  z-index: -1;
+
+}
+.hero-image .circle .center {
+  position: relative;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  background-color: var(--bg-color);
+}
+
+.hero-image .circle .center::after {
+  content: "";
+  position: absolute;
+  width: 93%;
+  height: 93%;
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #d3d3d3;
+}
+.hero-image .circle .center img {
+  width: 114%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  border-radius: 50%;
+}
+.hero-image .circle::after {
+  content: "";
+  position: absolute;
+  width: 1600px;
+  height: 800px;
+  top: -56%;
+  right: -130%;
+  transform: rotate(-35deg);
+  z-index: -1;
+  background-color: var(--primary-color);
+}
+
+
+
+
+
+
+
+
+
 
 
 
