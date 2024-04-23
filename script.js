@@ -33,8 +33,22 @@ $(document).ready(function () {
   links.on("click", moveUnderline);
 
 
-  // TODO: MENU RESPONSIVE
+  // TODO: MENU HAMBURGUESA   (RESPONSIVE)
   const hamBur = $(".ham-burguer");
+  hamBur.on("click", function() {
+    nav.toggleClass("active");
+    hamBur.toggleClass("active");
+  });
+
+  // Agregar la clase sticky si se hace scroll
+  const header = $("#header");
+  $(window).on("scroll", function() {
+    if($(window).scrollTop()>10) {
+      header.addClass("sticky");
+    } else {
+      header.removeClass("sticky");
+    }
+  });
 
 
 
