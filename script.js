@@ -52,6 +52,43 @@ $(document).ready(function () {
 
 
 
+  /* Circulos de porcentaje de habilidades */
+  function makeSVG(percentage, innerText = "") {
+    var absPersentage = Math.abs(percentage).toString();
+    var percentageStr = percentage.toString();
+    var classes = "";
+    
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -374,19 +374,116 @@ header .container {
 }
 
 
-/* * * * * * * * * * * * * * * * * * ** * * */
-/* * * * * * * * * * * * * * * * * * ** * * */
-/* * * * * * * * * * * * * * * * * * ** * * */
-/* * * * * * * * * * * * * * * * * * ** * * */
-/* * * * * * * * * * * * * * * * * * ** * * */
-/* * * * * * * * * * * * * * * * * * ** * * */
-/* * * * * * * * * * * * * * * * * * ** * * */
-/* * * * * * * * * * * * * * * * * * ** * * */
-/* * * * * * * * * * * * * * * * * * ** * * */
-/* * * * * * * * * * * * * * * * * * ** * * */
-/* * * * * * * * * * * * * * * * * * ** * * */
-/* * * * * * * * * * * * * * * * * * ** * * */
-/* * * * * * * * * * * * * * * * * * ** * * */
+/* 
+  * RESPONSIVE HERO 
+*/
+@media (max-width: 991px) {
+  #hero .container {
+    height: auto;
+    margin-top: 100px;
+    flex-direction: column;
+  }
+  #hero .container > div {
+    width: 100%;;
+  }
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    text-align: center;
+  }
+  .hero-text .title {
+    font-size: 2rem;
+  }
+  .hero-text .sub-title {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  .hero-text .desc {
+    font-size: 0.8rem;
+    margin-bottom: 2rem;
+  }
+  .hero-image {
+    height: 500px;
+  }
+  #hero .circle {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+  }
+  #hero .circle::after {
+    transform: rotate(0);
+    top: 0;
+    left: 50%;
+    height: 400px;
+  }
+  #hero .dots {
+    display: none;
+  }
+}
+
+
+/* 
+  * ABOUT SECTION  
+*/
+section {
+  position: relative;
+  padding: 5rem 0;
+}
+.about-inner {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  color: var(--text-color);
+}
+.about-inner .image-wrapper {
+  min-width: 50%;
+  position: relative;
+  padding: 5rem;
+}
+.about-inner .image-wrapper img {
+  height: 700px;
+}
+section .section-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+section.about .circle {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: -2%;
+  left: -2%;
+  border-radius: 50%;
+  border: 1.5rem solid var(--primary-color);
+}
+.skills-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+}
+.skills-wrapper .skill {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--bg-color);
+  box-shadow: var(--shadow);
+}
+.circle-chart {
+  width: 200px;
+  height: 200px;
+}
+/* Insertemos SVG con JS */
 
 
 
@@ -401,10 +498,6 @@ header .container {
 
 
 
-
-
-
-/* ABOUT SECTION  */
 
 /* Services section */
 
