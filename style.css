@@ -319,8 +319,8 @@ header .container {
 }
 .hero-image .circle .center {
   position: relative;
-  width: 80%;
-  height: 80%;
+  width: 70%;
+  height: 70%;
   border-radius: 50%;
   background-color: var(--bg-color);
 }
@@ -337,7 +337,7 @@ header .container {
   background-color: #d3d3d3;
 }
 .hero-image .circle .center img {
-  width: 114%;
+  width: 104%; /* VALOR REAL 114% */
   position: absolute;
   bottom: 0;
   left: 0;
@@ -355,8 +355,38 @@ header .container {
   z-index: -1;
   background-color: var(--primary-color);
 }
+#hero .dots {
+  position: absolute;
+  width: max-content;
+  height: 30px;
+  top: 30%;
+  left: 50%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  z-index: -1;
+}
+#hero .dots span {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+}
 
 
+/* * * * * * * * * * * * * * * * * * ** * * */
+/* * * * * * * * * * * * * * * * * * ** * * */
+/* * * * * * * * * * * * * * * * * * ** * * */
+/* * * * * * * * * * * * * * * * * * ** * * */
+/* * * * * * * * * * * * * * * * * * ** * * */
+/* * * * * * * * * * * * * * * * * * ** * * */
+/* * * * * * * * * * * * * * * * * * ** * * */
+/* * * * * * * * * * * * * * * * * * ** * * */
+/* * * * * * * * * * * * * * * * * * ** * * */
+/* * * * * * * * * * * * * * * * * * ** * * */
+/* * * * * * * * * * * * * * * * * * ** * * */
+/* * * * * * * * * * * * * * * * * * ** * * */
+/* * * * * * * * * * * * * * * * * * ** * * */
 
 
 
