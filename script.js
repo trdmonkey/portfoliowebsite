@@ -33,6 +33,46 @@ $(document).ready(function () {
   links.on("click", moveUnderline);
 
 
+  // TODO: MENU HAMBURGUESA   (RESPONSIVE)
+  const hamBur = $(".ham-burguer");
+  hamBur.on("click", function() {
+    nav.toggleClass("active");
+    hamBur.toggleClass("active");
+  });
+
+  // Agregar la clase sticky si se hace scroll
+  const header = $("#header");
+  $(window).on("scroll", function() {
+    if($(window).scrollTop()>10) {
+      header.addClass("sticky");
+    } else {
+      header.removeClass("sticky");
+    }
+  });
+
+
+
+  /* Circulos de porcentaje de habilidades */
+  function makeSVG(percentage, innerText = "") {
+    var absPersentage = Math.abs(percentage).toString();
+    var percentageStr = percentage.toString();
+    var classes = "";
+    var svg = 
+    '<svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" xmlns="http://www.w3.org/2000/svg" >' +
+    '<circle class="circle-chart__background" cx="16.9" cy="16.9" r="15.9" />' +
+    '<circle class="circle-chart__circle ' + 
+    classes + 
+    '"' + 
+    'stroke-desharrays="' + 
+    absPersentage + 
+    ',100" cx="16.9" cy="16.9" r="15.9" />' + 
+    '<g class="circle-chart__info">' + 
+     '  <text class="circle-chart__percent" x="17.9" y="15.5">' + 
+      percentageStr + 
+      "%</text>";
+    
+
+  }
 
 
 
@@ -40,7 +80,32 @@ $(document).ready(function () {
 
 
 
-  // TODO: Mobile menu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   // QUESTION: Add sticky class if scrolled
   // IMPORTANT: skills round circle svg
   //Portfolio gallery

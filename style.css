@@ -79,6 +79,7 @@ img {
   color: var(--text-color);
   background-color: var(--bg-color);
   border: 1px solid var(--text-color);
+  border-radius: 5px;
 }
 .btn-secondary:hover {
   color: var(--secondary-color);
@@ -103,12 +104,23 @@ p {
   font-size: 1rem;
 }
 
-/* HEADER */
+/* 
+  TODO: ===========================  HEADER  =============================== 
+*/
 header {
   position: absolute;
   padding: 1rem 0;
   width: 100%;
   z-index: 999;
+  transition: all 0.6s ease;
+}
+header.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--bg-color);
+  box-shadow: var(--shadow);
+  padding: 0.5rem 0;
 }
 header .container {
   display: flex;
@@ -134,6 +146,7 @@ header .container {
   flex: 1;
   margin-left: 2rem;
   position: relative;
+  transition: all 0.6s ease;
 }
 .nav-links ul {
   display: flex;
@@ -161,12 +174,13 @@ header .container {
 }
 .ham-burguer {
   padding: 0.5rem;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
   background-color: var(--primary-color);
+  border-radius: 5px;
 }
 .ham-burguer span {
   display: block;
@@ -188,29 +202,302 @@ header .container {
   transform: translateY(-8px) rotate(-45deg);
 }
 
-/* TODO  ==> Responsive Header */
+
+/* TODO  ==> RESPONSIVE HEADER */
+
 @media (max-width: 991px) {
   header {
     padding: 1rem;
     position: fixed;
   }
-  #logo h1,
-  #logo h1 span {
+  .logo h1,
+  .logo h1 span {
     font-size: 1.5rem;
+  }
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+    height: 100vh;
+    padding: 6rem 2rem 2rem 2rem;
+    transform: translateX(300px);
+    background-color: var(--bg-color);
+  }
+  .nav-links.active {
+    transform: translate(0);
+  }
+  .nav-links ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav-links ul li {
+    width: 100%;
+  }
+  .nav-links ul li a {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  .nav-links .cta .btn {
+    width: 100%;
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+  }
+  .ham-burguer {
+    display: flex;
+    z-index: 99;
   }
 }
 
 
-/* https://www.youtube.com/watch?v=SmFtcQqM8S8 */
-/* 28:20 */
+
+/* 
+  TODO: ===========================  HERO SECTION  =============================== 
+*/
+#hero {
+  min-height: 100vh;
+  overflow: hidden;
+}
+#hero .container {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  color: var(--text-color);
+}
+#hero .container > div {
+  width: 50%;
+}
+.sub-heading {
+  width: max-content;
+  padding: 0.5rem 1rem;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+  background-color: var(--primary-color-light);
+  border-radius: 5px;
+}
+.hero-text .title {
+  font-size: 4rem;
+  line-height: 1.2;
+}
+.hero-text .sub-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+.hero-text .desc {
+  font-size: 16px;
+  margin-bottom: 3rem;
+  line-height: 2;
+  opacity: 0.8;
+  max-width: 700px;
+}
+.hero-image {
+  position: relative;
+}
+.hero-image .circle {
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  top: -350px;
+  right: -180px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: var(--primary-color); */
+  background-color: var(--primary-color);
+  z-index: -1;
+
+}
+.hero-image .circle .center {
+  position: relative;
+  width: 70%;
+  height: 70%;
+  border-radius: 50%;
+  background-color: var(--bg-color);
+}
+
+.hero-image .circle .center::after {
+  content: "";
+  position: absolute;
+  width: 93%;
+  height: 93%;
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #d3d3d3;
+}
+.hero-image .circle .center img {
+  width: 104%; /* VALOR REAL 114% */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  border-radius: 50%;
+}
+.hero-image .circle::after {
+  content: "";
+  position: absolute;
+  width: 1600px;
+  height: 800px;
+  top: -56%;
+  right: -130%;
+  transform: rotate(-35deg);
+  z-index: -1;
+  background-color: var(--primary-color);
+}
+#hero .dots {
+  position: absolute;
+  width: max-content;
+  height: 30px;
+  top: 30%;
+  left: 50%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  z-index: -1;
+}
+#hero .dots span {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+}
+
+
+/* 
+  * RESPONSIVE HERO 
+*/
+@media (max-width: 991px) {
+  #hero .container {
+    height: auto;
+    margin-top: 100px;
+    flex-direction: column;
+  }
+  #hero .container > div {
+    width: 100%;;
+  }
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    text-align: center;
+  }
+  .hero-text .title {
+    font-size: 2rem;
+  }
+  .hero-text .sub-title {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  .hero-text .desc {
+    font-size: 0.8rem;
+    margin-bottom: 2rem;
+  }
+  .hero-image {
+    height: 500px;
+  }
+  #hero .circle {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+  }
+  #hero .circle::after {
+    transform: rotate(0);
+    top: 0;
+    left: 50%;
+    height: 400px;
+  }
+  #hero .dots {
+    display: none;
+  }
+}
+
+
+/* 
+  * ABOUT SECTION  
+*/
+section {
+  position: relative;
+  padding: 5rem 0;
+}
+.about-inner {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  color: var(--text-color);
+}
+.about-inner .image-wrapper {
+  min-width: 50%;
+  position: relative;
+  padding: 5rem;
+}
+.about-inner .image-wrapper img {
+  height: 700px;
+}
+section .section-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+section.about .circle {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: -2%;
+  left: -2%;
+  border-radius: 50%;
+  border: 1.5rem solid var(--primary-color);
+}
+.skills-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+}
+.skills-wrapper .skill {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--bg-color);
+  box-shadow: var(--shadow);
+}
+.circle-chart {
+  width: 200px;
+  height: 200px;
+}
+/* Insertemos SVG con JS */
 
 
 
 
 
-/* HERO SECTION */
 
-/* ABOUT SECTION  */
+
+
+
+
+
+
+
+
 
 /* Services section */
 
