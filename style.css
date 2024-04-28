@@ -479,13 +479,47 @@ section.about .circle {
   background-color: var(--bg-color);
   box-shadow: var(--shadow);
 }
-.circle-chart {
+.circlechart {
   width: 200px;
   height: 200px;
 }
 /* Insertemos SVG con JS */
+.circle-chart__circle {
+  stroke: var(--primary-color);
+  stroke-width: 2;
+  stroke-linecap: square;
+  fill: none;
+  transform: rotate(-90deg);
+  transform-origin: center;
+  animation: circle-chart-fill 2s reverse;
+}
+.circle-chart__background {
+  stroke: #ede4e4;
+  stroke-width: 1;
+  fill: none;
+}
+.circle-chart__info {
+  fill: var(--text-color);
+  opacity: 0;
+  transform: translateY(0.3em);
+  animation: circle-chart-appear 2s forwards;
+}
 
+/* 
+  * Animcacion del circulo porcentaje  
+*/
+@keyframes circle-chart-fill {
+  to {
+    stroke-dasharray: 0 100;
+  }
+}
 
+@keyframes circle-chart-appear {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 
 
